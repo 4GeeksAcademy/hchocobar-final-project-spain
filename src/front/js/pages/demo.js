@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
 
+import { Context } from "../store/appContext";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
@@ -11,7 +11,10 @@ export const Demo = () => {
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
-						<li key={index} style={{ background: item.background }} className="list-group-item d-flex justify-content-between">
+						<li
+							key={index}
+							className="list-group-item d-flex justify-content-between"
+							style={{ background: item.background }}>
 							<Link to={"/single/" + index}>
 								<span>Link to: {item.title}</span>
 							</Link>
