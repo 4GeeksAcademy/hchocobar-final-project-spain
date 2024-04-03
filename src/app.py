@@ -25,7 +25,7 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MIGRATE = Migrate(app, db, compare_type=True)
 db.init_app(app)
-# Other config
+# Other configuration
 setup_admin(app)  # Add the admin
 setup_commands(app)  # Add the admin
 # Add all endpoints form the API with a "api" prefix
