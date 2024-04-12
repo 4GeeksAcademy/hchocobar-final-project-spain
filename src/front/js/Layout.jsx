@@ -11,6 +11,8 @@ import { Home } from "./pages/Home.jsx";
 import { Demo } from "./pages/Demo.jsx";
 import { Single } from "./pages/Single.jsx";
 import { Page404 } from "./pages/Page404.jsx";
+import { Login } from "./pages/Login.jsx";
+import { Dashboard } from "./pages/Dashboard.jsx";
 
 
 // Create your first component
@@ -30,6 +32,8 @@ const Layout = () => {
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<Page404 />} path="*" />
+                        <Route element={<Login/>} path="/login" />
+                        <Route element={<Dashboard/>} path="/dashboard" />
                     </Routes>
                     <Footer />
                 </ScrollToTop>
